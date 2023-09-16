@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Ruta para servir archivos HTML y procesar el formulario
-app.use(express.static('index.html'));
+app.use(express.static('/index.html'));
 
 // Ruta para procesar el formulario
 app.post('/enviar-formulario', (req, res) => {
