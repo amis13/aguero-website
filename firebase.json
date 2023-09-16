@@ -1,20 +1,11 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
-  },
-  "rewrites": [
-    {
-      "source": "/enviar-formulario/**",
-      "function": "app"
-    },
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }

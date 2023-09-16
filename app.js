@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const enviarCorreo = require('./enviar_correo');
+const enviarCorreo = require('./enviar_correo'); // Asegúrate de ajustar la ruta al archivo enviar_correo.js
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Ruta para servir archivos HTML y procesar el formulario
+// Ruta para servir archivos HTML desde la carpeta 'public'
 app.use(express.static('public'));
 
 // Ruta para procesar el formulario
@@ -17,7 +17,7 @@ app.post('/enviar-formulario', (req, res) => {
     enviarCorreo(name, email, message);
 
     // Redirige a una página de agradecimiento
-    res.redirect('/gracias.html'); // Crea una página de agradecimiento (gracias.html)
+    res.redirect('/gracias.html'); // Asegúrate de que gracias.html esté en la carpeta 'public'
 });
 
 const PORT = process.env.PORT || 3000;
