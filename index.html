@@ -96,21 +96,16 @@
 								<h2>Contacto</h2>					
 
 								<form method="post" action="enviar_correo.php">
-
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Nombre" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Mensaje"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Enviar" class="primary" /></li>
-									</ul>
+									<label for="name">Nombre:</label>
+									<input type="text" id="name" name="name" required><br><br>
+									
+									<label for="email">Correo Electrónico:</label>
+									<input type="email" id="email" name="email" required><br><br>
+									
+									<label for="message">Mensaje:</label>
+									<textarea id="message" name="message" rows="4" required></textarea><br><br>
+									
+									<input type="submit" value="Enviar" />
 								</form>
 							</section>
 							<section id="contacto">
