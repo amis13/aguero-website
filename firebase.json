@@ -6,5 +6,15 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/enviar-formulario/**",
+      "function": "app"
+    },
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
 }
