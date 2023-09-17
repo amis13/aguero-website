@@ -3,6 +3,10 @@
     "public": "public",
     "rewrites": [
       {
+        "source": "/enviar-formulario",
+        "function": "app"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
